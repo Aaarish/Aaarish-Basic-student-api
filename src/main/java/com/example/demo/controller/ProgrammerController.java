@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Programmer;
-import com.example.demo.service.ProgrammerService;
+import com.example.demo.service.ProgrammerServiceImpl;
 
 @RestController
 @RequestMapping("programmers")
 public class ProgrammerController {
 	@Autowired
-	ProgrammerService service;
+	ProgrammerServiceImpl service;
 	
 	@PostMapping("")
 	public Programmer addProgrammer(@RequestBody Programmer programmer) {
